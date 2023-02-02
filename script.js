@@ -11,15 +11,15 @@ const createGrid = (dimension) => {
     gridContainer.appendChild(pixel);
     pixel.style.flex = '0 0 '+ (100/dimension)+'%';
     pixel.addEventListener('mouseover', (e) => {
-      e.target.style.backgroundColor = 'blue';
+      e.target.style.backgroundColor = 'black';
     })
   }
 }
 
 const replaceGrid = () => {
-  let dim = parseInt(window.prompt('DIME'))
+  let dim = parseInt(window.prompt('Dimension of the grid: (Between 1 and 64)'))
   if (dim < 1 || dim > 64) {
-    alert('AGGIUNGI UNA DIMENSONE VALIDA')
+    alert('Add a valid dimension')
     dim = defaultDimension;
   }
   const pixels = document.querySelectorAll('.pixel');
@@ -35,9 +35,6 @@ const clearGrid = () => {
     square.style.removeProperty('background-color');
   })
 }
-
-
-
 
 createGrid(defaultDimension);
 

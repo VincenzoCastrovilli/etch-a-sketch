@@ -2,14 +2,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 
+h1 {
+  padding-top: 20px;
+  font-size: 40px;
+}
 
 #grid-container {
   height: 480px;
   width: 480px;
-  margin: 40px auto;
   display: flex;
   flex-wrap: wrap;
   border:5px solid black;
@@ -17,5 +27,20 @@
 
 .pixel {
   border: 1px solid black;
+}
 
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+button {
+  padding: 8px 12px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  background-color: rgb(47, 55, 71);
+  color: white;
+  border: 1px solid rgb(47, 55, 71);
+  border-radius: 5px;
 }
